@@ -30,9 +30,9 @@ fn main() {
                 Err(_) => continue
             };
 
-            println!("You inputted: {}", tempc);
+            println!("You inputted: {}\n", tempc);
 
-            println!("{}", (calc_tempc(tempc)).to_string());
+            println!("Celsius temp is: {}\n", (calc_tempc(tempc)).to_string());
 
         } else if choice.trim() == "F" {
 
@@ -50,9 +50,9 @@ fn main() {
                 Err(_) => continue
             };
 
-            println!("You inputted: {}", tempf);
+            println!("You inputted: {}\n", tempf);
 
-            println!("{}", (calc_tempf(tempf)).to_string());
+            println!("Fahrenheit temp is: {}\n", (calc_tempf(tempf)).to_string());
 
         } else if choice.trim() == "END" {
             break;
