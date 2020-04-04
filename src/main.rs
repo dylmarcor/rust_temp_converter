@@ -59,6 +59,7 @@ fn main() {
             println!("You inputted: {}", tempf);
 
             println!("{}", (calc_tempf(tempf)).to_string());
+        }
     }
 }
 
@@ -66,6 +67,6 @@ fn calc_tempc(temp: f64) -> f64 {
    temp / 5.0 * 9.0 + 32.0
 }
 
-fn calc_tempf(temp: f64) -> {
+fn calc_tempf(temp: f64) -> f64 {
     (temp - 32.0) * 5.0 / 9.0
 }
