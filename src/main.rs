@@ -16,7 +16,7 @@ fn main() {
 
         if choice.trim() == "C" {
 
-            println!("Enter the tempc you want to convert\n");
+            println!("Enter the temperature you want to convert\n");
 
             let mut tempc = String::new();
 
@@ -35,7 +35,7 @@ fn main() {
 
         } else if choice.trim() == "F" {
 
-            println!("Enter the tempc you want to convert\n");
+            println!("Enter the temperature you want to convert\n");
             println!("Enter \"END\" to halt the program");
 
             let mut tempf = String::new();
