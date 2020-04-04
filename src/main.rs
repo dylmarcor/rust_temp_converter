@@ -11,21 +11,18 @@ fn main() {
         io::stdin()
             .read_line(&mut choice)
             .expect("Failed to read line");
+        
+        println!("Enter \"END\" to halt the program");
 
         if choice.trim() == "C" {
 
             println!("Enter the tempc you want to convert\n");
-            println!("Enter \"END\" to halt the program");
 
             let mut tempc = String::new();
 
             io::stdin()
                 .read_line(&mut tempc)
                 .expect("Failed to read line");
-
-            if tempc.trim()  == "END" {
-                break;
-            }
 
             let tempc: f64 = match tempc.trim().parse() {
                 Ok(num) => num,
@@ -47,10 +44,6 @@ fn main() {
                 .read_line(&mut tempf)
                 .expect("Failed to read line");
 
-            if tempf.trim()  == "END" {
-                break;
-            }
-
             let tempf: f64 = match tempf.trim().parse() {
                 Ok(num) => num,
                 Err(_) => continue
@@ -59,6 +52,9 @@ fn main() {
             println!("You inputted: {}", tempf);
 
             println!("{}", (calc_tempf(tempf)).to_string());
+
+        } else if choice.trim() == "END" {
+            break;
         }
     }
 }
