@@ -7,6 +7,7 @@ fn main() {
         println!("Enter the temperature you want to convert\n");
         println!("Enter \"END\" to halt the program");
 
+        let mut choice = String::new();
         let mut temperature = String::new();
 
         io::stdin()
