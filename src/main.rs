@@ -53,6 +53,7 @@ fn main() {
             println!("Enter \"END\" to halt the program");
 
             let mut tempf = String::new();
+            let mut user_continue = String::new();
 
             io::stdin()
                 .read_line(&mut tempf)
@@ -66,6 +67,18 @@ fn main() {
             println!("You inputted: {}\n", tempf);
 
             println!("Fahrenheit temp is: {}\n", (calc_tempf(tempf)).to_string());
+
+            println!("Would you like to do another? Y or N\n");
+
+            io::stdin()
+                .read_line(&mut user_continue)
+                .expect("Failed to read line");
+
+            if user_continue.trim() == "Y" {
+                continue;
+            } else if user_continue.trim() == "N" {
+                break;
+            }
 
         } else if choice.trim() == "END" {
             break;
