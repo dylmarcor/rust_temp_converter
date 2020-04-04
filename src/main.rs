@@ -4,7 +4,7 @@ fn main() {
     println!("Temperatue Converter\n\n\n");
 
     loop {
-        println!("Enter the temperature you want to convert");
+        println!("Enter the temperature you want to convert\n");
         println!("Enter \"END\" to halt the program");
 
         let mut temperature = String::new();
@@ -30,4 +30,8 @@ fn main() {
 
 fn tempc(temp: f64) -> f64 {
    temp / 5.0 * 9.0 + 32.0
+}
+
+fn tempf(temp: f64) -> {
+    (temp - 32.0) * 5.0 / 9.0
 }
