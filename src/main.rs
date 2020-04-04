@@ -1,7 +1,7 @@
 use std::io;
 
 fn main() {
-    println!("Temperatue Converter");
+    println!("Temperatue Converter\n\n\n");
 
     loop {
         println!("Enter the temperature you want to convert");
