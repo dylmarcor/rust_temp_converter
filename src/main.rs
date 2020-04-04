@@ -5,6 +5,7 @@ fn main() {
 
     loop {
         println!("Would you like Celsius or Fahrenheit?");
+        println!("Please enter C or F\n");
 
         let mut choice = String::new();
 
@@ -12,7 +13,7 @@ fn main() {
             .read_line(&mut choice)
             .expect("Failed to read line");
         
-        println!("Enter \"END\" to halt the program");
+        println!("Enter \"END\" to halt the program\n");
 
         if choice.trim() == "C" {
 
