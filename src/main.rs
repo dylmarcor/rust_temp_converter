@@ -4,10 +4,10 @@ fn main() {
     println!("Temperatue Converter\n\n\n");
 
     loop {
-        println!("Would you like Celsius or Fahrenheit?");
-        println!("Please enter C or F\n");
+        // println!("Would you like Celsius or Fahrenheit?");
+        // println!("Please enter C or F\n");
 
-        let mut choice = String::new();
+        let mut choice: char = temp_choice();
 
         io::stdin()
             .read_line(&mut choice)
@@ -15,7 +15,7 @@ fn main() {
         
         println!("Enter \"END\" to halt the program\n");
 
-        if choice.trim() == "C" {
+        if choice == "C" {
 
             println!("Enter the temperature you want to convert\n");
 
@@ -47,7 +47,7 @@ fn main() {
                 break;
             }
 
-        } else if choice.trim() == "F" {
+        } else if choice == "F" {
 
             println!("Enter the temperature you want to convert\n");
             println!("Enter \"END\" to halt the program");
@@ -80,11 +80,37 @@ fn main() {
                 break;
             }
 
-        } else if choice.trim() == "END" {
+        } else if choice == "END" {
             break;
         }
     }
 }
+
+fn temp_choice() -> &str {
+    println!("Enter the temperature you'd like to convert: F or C?");
+
+    let mut choice = String::new();
+
+    io::stdin()
+        .read_line(&mut choice)
+        .expect("Failed to read line");
+
+    loop {
+        if choice == "F" {
+            "F"
+        } else if choice == "C" {
+            "C"
+        } else if choice == "END" {
+            break;
+        } else {
+            println!("Not a valid choice.");
+            continue
+        }
+    }
+}
+    
+
+
 
 fn calc_tempc(temp: f64) -> f64 {
    temp / 5.0 * 9.0 + 32.0
